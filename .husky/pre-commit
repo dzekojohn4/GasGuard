@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run GasGuard staged-file scan
+node scripts/pre-commit-scan.js

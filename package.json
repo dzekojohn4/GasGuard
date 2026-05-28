@@ -2,6 +2,7 @@
   "name": "gasguard-monorepo",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "build": "tsc -b",
     "build:engine": "tsc -p libs/engine/tsconfig.json",
     "build:api": "nest build",
@@ -28,6 +29,7 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
+    "husky": "^8.0.0",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
