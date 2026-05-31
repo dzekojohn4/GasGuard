@@ -4,6 +4,7 @@ pub mod vyper;
 pub mod soroban;
 pub mod optimization;
 pub mod solidity;
+pub mod security;
 
 // Explicitly export core types to avoid ambiguity
 pub use rule_engine::{Rule, RuleEngine, RuleViolation, ViolationSeverity, extract_struct_fields, find_variable_usage};
@@ -17,6 +18,8 @@ pub use optimization::storage::{
     PackingOpportunity,
     VariableInfo,
 };
+pub use optimization::deployment::{estimate_bytecode_size, ExcessiveContractSizeRule};
+pub use security::HardcodedAddressesRule;
 
 // Export Soroban types specifically
 pub use soroban::{

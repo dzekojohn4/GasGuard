@@ -1,4 +1,5 @@
 pub mod storage;
+pub mod deployment;
 
 pub use storage::{
     detect_packing_opportunities,
@@ -8,3 +9,5 @@ pub use storage::{
     PackingOpportunity,
     VariableInfo,
 };
+
+pub use deployment::{estimate_bytecode_size, ExcessiveContractSizeRule};
